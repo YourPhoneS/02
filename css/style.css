@@ -1,0 +1,118 @@
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.mw {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+}
+.header {
+    width: 100%;
+    padding: 0px 0;
+    box-shadow: 0 0 10px #d4d4d4; 
+    text-align: center;
+}
+.header img {
+    width: 100px;
+    height: 100px;
+}
+.banner {
+    margin: 50px 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 'b1 b2'
+                         'b1 b3';
+    grid-gap: 20px;
+}
+.b1 {
+    grid-area: b1;
+    background-image: url('../img/block1.webp');
+    background-size: cover;
+}
+.b2 {
+    grid-area: b2;
+    background-image: url('../img/block2.jpg');
+}
+.b3 {
+    grid-area: b3;
+    background-image: url('../img/block3.jpg');
+}
+.b2, .b3 {
+    background-size: contain;
+
+}
+.b2 button, .b3 button {
+    margin: auto;
+}
+.b2 .title, .b3 .title {
+    text-align: center;
+}
+.block {
+    width: 100%;
+    padding: 70px 20px;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px #d4d4d4;
+    border-radius: 10px;
+}
+.title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 900;
+    color: #444;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: rgba(49, 49, 49, 0.767); 
+} 
+.block button {
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: rgb(255, 172, 204);
+    text-transform: capitalize;
+    cursor: pointer; 
+    color: #333;
+}
+
+.block a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 630px) {
+
+    .banner {
+        grid-template-columns: 100%;
+        grid-template-areas: 'b1'
+                             'b2'
+                             'b3';
+    }
+    .b1 button {
+        margin: auto;
+    }
+    .b1 .title {
+        text-align: center;
+    }
+    .b1 {
+        background-size: contain;
+    }
+    
+
+}
+
+@media screen and (max-width: 465px) {
+
+    .b1 .title span {
+        display: none;
+    }
+    .title {
+        color: #222;
+    }
+
+}
+
